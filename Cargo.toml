@@ -1,0 +1,19 @@
+[package]
+name = "solana_caching_service"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.38.0", features = ["full"] }
+axum = "0.7.5"
+solana-client = "1.18.18"
+solana-sdk = "1.18.18"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+async-trait = "0.1.80"
+anyhow = "1.0.86"
+serde = "1.0.203"
+mockall = "0.12.1" 
+
+[dev-dependencies]
+# mockall has been removed from here
