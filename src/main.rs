@@ -22,7 +22,7 @@ async fn main() -> anyhow::Result<()> {
         .with_env_filter(tracing_subscriber::EnvFilter::from_default_env().add_directive("info".parse()?))
         .init();
 
-    info!("🚀 Starting Solana Caching Web Service...");
+    info!("Starting Solana Caching Web Service...");
 
     let full_rpc_url = format!("{}{}", RPC_ENDPOINT, API_KEY);
     let rpc_client = Arc::new(RpcClientWrapper::new(full_rpc_url));
@@ -41,7 +41,7 @@ async fn main() -> anyhow::Result<()> {
         POLLER_INTERVAL,
     ));
 
-    info!("🎧 Listening on {}", SERVER_ADDR);
+    info!("Listening on {}", SERVER_ADDR);
     run_server(app_state, SERVER_ADDR).await?;
 
     Ok(())
