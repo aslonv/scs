@@ -1,7 +1,7 @@
 The service exposes a single HTTP endpoint, with  Axum for the web layer and the `solana-client` non-blocking API for all blockchain interactions.
 
 
-## Architecture
+## Design
 - `SlotCache` asynchronous, size-limited cache to store confirmed slot numbers. The cache maintains a limit of the last 1000 confirmed slots and with a simple eviction policy removes the oldest entries when the capacity is exceeded. Used `scc` for high-performance concurrent data access.
   
 - `run_cache_poller` minimizes RPC calls by querying the `getBlocks` range from the last known confirmed slot up to the current latest slot. This ensures the cache is continuously and efficiently hydrated with confirmed data.
