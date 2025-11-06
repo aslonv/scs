@@ -1,6 +1,4 @@
-## Overview
-
-The service exposes a single HTTP endpoint, with  **Axum** for the web layer and the **`solana-client`** non-blocking API for all blockchain interactions.
+The service exposes a single HTTP endpoint, with  Axum for the web layer and the `solana-client` non-blocking API for all blockchain interactions.
 
 
 ## Architecture
