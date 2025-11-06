@@ -13,7 +13,7 @@ The service exposes a single HTTP endpoint, with  **Axum** for the web layer and
     - Returns `200 OK` if the slot is confirmed, or `404 NOT FOUND` if it is not a confirmed block.
 
 
-## Setup and Execution
+## Setup
 
 ### Build and Test
 
