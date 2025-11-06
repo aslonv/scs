@@ -26,6 +26,7 @@ cargo test
 The service requires the `RUST_LOG` environment variable to be set for visible tracing output. Use the command appropriate for your operating system's shell:
 
 PowerShell :  `$env:RUST_LOG="info,metrics=info"; cargo run` 
+
 Bash/Zsh (Linux/macOS) : `RUST_LOG="info,metrics=info" cargo run` 
 
 
@@ -34,4 +35,5 @@ Bash/Zsh (Linux/macOS) : `RUST_LOG="info,metrics=info" cargo run`
 With the server running (listening on `0.0.0.0:3000`), use a new terminal to query the endpoint.
 
 PowerShell (Windows) : `irm -Method Get http://localhost:3000/isSlotConfirmed/377335664` 
+
 Bash/Zsh (Linux/macOS) : `curl -i http://localhost:3000/isSlotConfirmed/377335664` 
